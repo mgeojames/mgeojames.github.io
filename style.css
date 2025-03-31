@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header,
+section,
+footer {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: rgb(39, 79, 100);
+  text-align: center;
+}
+
+h2.section-header {
+  text-transform: capitalize;
+}
+
+p {
+  color: black;
+  line-height: 1.7;
+}
+
+.section-header {
+  color: rgb(39, 79, 100);
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(39, 79, 100);
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+nav ul li a:hover {
+  color: crimson;
+  text-decoration: underline;
+  text-decoration-color: navy;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+footer {
+  text-align: center;
+}
+
+#contact {
+  display: none;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #333366;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555588;
+}
