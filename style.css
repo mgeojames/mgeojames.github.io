@@ -4,6 +4,7 @@ strong {
 
 i {
   color: rgb(0, 54, 64);
+  /* white-space: nowrap; */
 }
 
 body {
