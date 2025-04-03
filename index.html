@@ -29,61 +29,63 @@
         </nav>
     </header>
 
-    <section id="education">
-        <h2 class="section-header">Education</h2>
-        <h4>Master of Science (M.Sc.) in Data Science and Artificial Intelligence
-            (Grade
-            2.1, ECTS: 140)
-            <i> Saarland University, Saarbrücken, Germany (2020 - Current)</i>
-        </h4>
-        <p>
-            <strong>Focus:</strong> Statistics, Artificial Intelligence, Ethical AI, Machine Translation, Machine
-            Learning, Deep Learning, Natural Language Processing, Image Processing and Computer Vision,
-            Human-Computer
-            Interaction <br><br>
+    <section id="education" class="accordion-section">
+        <h2 class="section-header accordion-toggle">Education <span class="arrow">&#9660;</span></h2>
+        <div class="accordion-content" style="display: none;">
+            <h4>Master of Science (M.Sc.) in Data Science and Artificial Intelligence
+                (Grade
+                2.1, ECTS: 140)
+                <i> Saarland University, Saarbrücken, Germany (2020 - Current)</i>
+            </h4>
+            <p>
+                <strong>Focus:</strong> Statistics, Artificial Intelligence, Ethical AI, Machine Translation, Machine
+                Learning, Deep Learning, Natural Language Processing, Image Processing and Computer Vision,
+                Human-Computer
+                Interaction <br><br>
 
-            <strong>Master Thesis: P3C-LiB: Partial Constant Current Charging Profile Approach for Estimating
-                Lithium-Ion Battery Capacity Using Deep Learning Techniques</strong> <br>
+                <strong>Master Thesis: P3C-LiB: Partial Constant Current Charging Profile Approach for Estimating
+                    Lithium-Ion Battery Capacity Using Deep Learning Techniques</strong> <br>
 
-            Developed the noval P3C-LiB Deep Learning model in collaboration with BMW AG and DFKI GmbH, based on the
-            much underestimated data from the Constant Current Charging phase to predict the capacity of lithium-ion
-            batteries for electric vehicles.
-            The model demonstrated state-of-the-art performance, achieving a mean absolute percentage error of 0.49%
-            in
-            the best-case scenario and 1.27% in the worst-case setup. Its lightweight architecture ensures
-            compatibility
-            with the Battery Management Systems of EVs, offering an efficient and reliable solution for practical
-            implementation.
-            <br>
-            Advisors: Prof. Philipp Slusallek, Dr. Christian Müller, Igor Vozniak, Dr. Thinh
-            Nguyen-Xuan, and Li Jiahao.
-        </p>
-        <hr>
-        <h4> Bachelor of Technology in Computer Science and Engineering (CGPA
-            8.19/10.00) <i> Amal Jyothi College of Engineering, Kerala, India (2015 - 2019)</i></h4>
+                Developed the noval P3C-LiB Deep Learning model in collaboration with BMW AG and DFKI GmbH, based on the
+                much underestimated data from the Constant Current Charging phase to predict the capacity of lithium-ion
+                batteries for electric vehicles.
+                The model demonstrated state-of-the-art performance, achieving a mean absolute percentage error of 0.49%
+                in
+                the best-case scenario and 1.27% in the worst-case setup. Its lightweight architecture ensures
+                compatibility
+                with the Battery Management Systems of EVs, offering an efficient and reliable solution for practical
+                implementation.
+                <br>
+                Advisors: Prof. Philipp Slusallek, Dr. Christian Müller, Igor Vozniak, Dr. Thinh
+                Nguyen-Xuan, and Li Jiahao.
+            </p>
+            <hr>
+            <h4> Bachelor of Technology in Computer Science and Engineering (CGPA
+                8.19/10.00) <i> Amal Jyothi College of Engineering, Kerala, India (2015 - 2019)</i></h4>
 
-        <p><strong>Focus:</strong> Artificial Intelligence, Design Engineering, Data Mining & Warehousing, Machine
-            Learning, Natural Language Processing, Algorithms and Data Structures, Software Engineering, Database
-            Management <br><br>
+            <p><strong>Focus:</strong> Artificial Intelligence, Design Engineering, Data Mining & Warehousing, Machine
+                Learning, Natural Language Processing, Algorithms and Data Structures, Software Engineering, Database
+                Management <br><br>
 
-            ​<strong>​Micro Project: Academic Calendar</strong><br>
+                ​<strong>​Micro Project: Academic Calendar</strong><br>
 
-            Developed a Python and SQL-based system to efficiently assign tasks to students while preventing
-            overload
-            for all the stakeholders. The system monitors assigned tasks and
-            enables teachers and tutors to make advance bookings, fostering indirect communication among all
-            stakeholders. This project aims stress management and enhance student productivity.
-            <br><br>
+                Developed a Python and SQL-based system to efficiently assign tasks to students while preventing
+                overload
+                for all the stakeholders. The system monitors assigned tasks and
+                enables teachers and tutors to make advance bookings, fostering indirect communication among all
+                stakeholders. This project aims stress management and enhance student productivity.
+                <br><br>
 
-            <strong>Thesis: A Cyber Defensive System for Network Protection using SNORT (link)</strong>
-            <br>Designed and implemented a system using Snort to detect and prevent network intrusions,
-            incorporating a
-            temporary backup mechanism to ensure efficient recovery during the post-intrusion phase. The system
-            monitors
-            network activity and proactively takes preventive measures against intrusions while maintaining normal
-            network functionality.
-            <br>Advisor: Prof. Manoj T Joy
-        </p>
+                <strong>Thesis: A Cyber Defensive System for Network Protection using SNORT (link)</strong>
+                <br>Designed and implemented a system using Snort to detect and prevent network intrusions,
+                incorporating a
+                temporary backup mechanism to ensure efficient recovery during the post-intrusion phase. The system
+                monitors
+                network activity and proactively takes preventive measures against intrusions while maintaining normal
+                network functionality.
+                <br>Advisor: Prof. Manoj T Joy
+            </p>
+        </div>
     </section>
 
     <section id="skills">
@@ -145,7 +147,23 @@
                 contactInfo.style.display = "block";
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var accordions = document.querySelectorAll('.accordion-toggle');
+            accordions.forEach(function (toggle) {
+                toggle.addEventListener('click', function () {
+                    toggle.classList.toggle('active');
+                    var content = toggle.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            });
+        });
     </script>
+
 
 </body>
 

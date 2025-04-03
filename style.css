@@ -3,7 +3,7 @@ strong {
 }
 
 i {
-  color: rgb(0, 54, 64);
+  color: rgb(4, 165, 201);
   /* white-space: nowrap; */
 }
 
@@ -105,4 +105,25 @@ button {
 
 button:hover {
   background-color: #555588;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  user-select: none; /* Prevents text selection */
+}
+
+.accordion-toggle .arrow {
+  float: right; /* Arrow to the right */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.accordion-content {
+  padding: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Rotate arrow when section is active */
+.accordion-toggle.active .arrow {
+  transform: rotate(180deg); /* Flips the arrow */
 }
